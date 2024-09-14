@@ -1,0 +1,35 @@
+i = 0
+print("PLEASE REGISTER")
+while i < 1:
+    a = str(input("Enter your full name: "))
+    b = str(input("Enter a password: "))
+    if len(b) < 6:
+        print("Enter a password greater than or equal to 6")
+    else:
+        c = str(input("Enter your phone number: "))
+        if len(c) != 10:
+            print("Invalid phone number")
+        else:
+            print("Register successful!")
+            i = 1
+
+i = 0  # Reset i to 0 for the login loop
+print("PLEASE LOGIN")
+while i < 1:
+    d = str(input("Enter your full name: "))
+    e = str(input("Enter your password: "))
+    f = str(input("Enter your phone number: "))
+    if d != a or e != b or f != c:
+        print("Invalid Login. Re-enter the correct details.")
+    else:
+        print("LOGIN SUCCESSFUL")
+        i = 1
+
+patient_name = input("Enter patient name: ")
+days_spent = int(input("Enter days spent in hospital: "))
+daily_rate = float(input("Enter daily rate: "))
+total_bill = days_spent * daily_rate
+print(f"Patient name: {patient_name}")
+print(f"Days spent in hospital: {days_spent}")
+print(f"Daily rate: ${daily_rate:.2f}")
+print(f"Total bill: ${total_bill:.2f}")
